@@ -1,0 +1,65 @@
+.section {
+    padding: 8rem 0;
+    position: relative;
+    z-index: 10;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    letter-spacing: -0.03em;
+    margin-bottom: 2.5rem;
+    letter-spacing: -0.03em;
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: left;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.item {
+    padding: 1.5rem 2rem;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: var(--accents-5);
+}
+
+.item:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: var(--foreground);
+    transform: translateX(4px);
+}
+
+.itemTitle {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--foreground);
+    transition: color 0.2s ease;
+}
+
+.item:hover .itemTitle {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.itemDate {
+    font-size: 0.9rem;
+    color: var(--accents-4);
+    font-variant-numeric: tabular-nums;
+}

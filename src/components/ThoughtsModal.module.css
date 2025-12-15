@@ -1,0 +1,117 @@
+.overlay {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    animation: fadeIn 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.content {
+    width: 100%;
+    max-width: 700px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 3rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-height: 85vh;
+    overflow-y: auto;
+    animation: scaleUp 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--glass-border);
+    padding-bottom: 1.5rem;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.date {
+    color: var(--accents-4);
+    font-size: 0.9rem;
+    font-family: var(--font-mono);
+    /* Optional if you have a mono font, else inherit */
+}
+
+.body {
+    color: var(--accents-6);
+    line-height: 1.8;
+    font-size: 1.05rem;
+    white-space: pre-wrap;
+    /* Preserves newlines in the content string */
+}
+
+.closeButton {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--accents-4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.closeButton:hover {
+    background: var(--glass-border);
+    color: var(--foreground);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+[data-theme='light'] .overlay {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+[data-theme='light'] .content {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}

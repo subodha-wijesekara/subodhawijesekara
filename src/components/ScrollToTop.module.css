@@ -1,0 +1,39 @@
+.button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    color: var(--foreground);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.button:hover {
+    background: var(--cta-bg);
+    border-color: var(--foreground);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme='light'] .button {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}

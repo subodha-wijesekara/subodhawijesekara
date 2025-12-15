@@ -1,0 +1,101 @@
+.section {
+    padding: 8rem 0;
+    position: relative;
+    z-index: 10;
+}
+
+.header {
+    text-align: left;
+    margin-bottom: 4rem;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: -0.03em;
+    margin-bottom: 1rem;
+    letter-spacing: -0.03em;
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.item {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.4s ease;
+    aspect-ratio: 4/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Standard item scaling */
+.item:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+/* Ensure images scale nicely on hover if I target the img tag generically inside .item */
+.item img {
+    transition: transform 0.5s ease;
+}
+
+.item:hover img {
+    transform: scale(1.05);
+}
+
+.item:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+.item:hover img {
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent 60%);
+    display: flex;
+    align-items: flex-end;
+    padding: 2rem;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+    z-index: 5;
+}
+
+.item:hover .overlay {
+    opacity: 1;
+}
+
+.caption {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.25rem;
+    transform: translateY(4px);
+    transition: transform 0.3s;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.item:hover .caption {
+    transform: translateY(0);
+}

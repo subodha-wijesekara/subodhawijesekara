@@ -1,0 +1,211 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
+}
+
+/* Removed local glow as AuroraBackground handles it now, preventing conflict */
+
+.title {
+    font-size: 5.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    margin-bottom: 2rem;
+    /* Premium Gradient Text */
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    max-width: 900px;
+}
+
+.gradientText {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    /* Fallback */
+}
+
+.subtitle {
+    font-size: 1.35rem;
+    color: var(--accents-5);
+    max-width: 600px;
+    margin-bottom: 3.5rem;
+    line-height: 1.6;
+    letter-spacing: -0.02em;
+}
+
+.actions {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.buttonPrimary {
+    padding: 0 2.5rem;
+    height: 52px;
+    border-radius: 26px;
+    font-weight: 600;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease;
+    background: var(--foreground);
+    color: var(--background);
+    border: 1px solid var(--foreground);
+}
+
+.buttonPrimary:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.15);
+}
+
+.buttonSecondary {
+    padding: 0 2.5rem;
+    height: 52px;
+    border-radius: 26px;
+    font-weight: 600;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--accents-6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.buttonSecondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--foreground);
+    border-color: var(--foreground);
+}
+
+/* Animations */
+.container>* {
+    animation: fadeIn 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.container>*:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.container>*:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.container>*:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 3.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.125rem;
+    }
+
+    .actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .buttonPrimary,
+    .buttonSecondary {
+        width: 100%;
+    }
+}
+
+/* Light Mode Overrides */
+[data-theme='light'] .buttonPrimary:hover {
+    background: #333;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme='light'] .buttonSecondary {
+    background: rgba(0, 0, 0, 0.05);
+    color: var(--foreground);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='light'] .buttonSecondary:hover {
+    background: rgba(0, 0, 0, 0.1);
+    border-color: var(--foreground);
+}
+
+[data-theme='light'] .socialIcon {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.1);
+    color: var(--accents-6);
+}
+
+[data-theme='light'] .socialIcon:hover {
+    background: rgba(0, 0, 0, 0.1);
+    color: var(--foreground);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 3rem;
+    animation: fadeIn 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    animation-delay: 0.4s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.socialIcon {
+    color: var(--accents-5);
+    transition: all 0.3s ease;
+    padding: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socialIcon:hover {
+    color: var(--foreground);
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}

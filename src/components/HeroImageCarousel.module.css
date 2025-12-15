@@ -1,0 +1,54 @@
+.carousel {
+    position: absolute;
+    top: 50%;
+    /* Position towards the middle/top */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    /* Behind content (z-index 1), above background (-1) */
+    overflow: hidden;
+    pointer-events: none;
+    opacity: 0.15;
+    /* Subtle opacity */
+    mask-image: radial-gradient(circle at center, black, transparent 70%);
+    -webkit-mask-image: radial-gradient(circle at center, black, transparent 70%);
+}
+
+.imageContainer {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.active {
+    opacity: 1;
+}
+
+.image {
+    object-fit: cover;
+    filter: grayscale(100%) contrast(1.2);
+    /* Make it blend better with theme */
+}
+
+/* Optional: Additional overlay if needed, though mask-image handles the fade well */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: var(--background);
+    opacity: 0.2;
+    mix-blend-mode: overlay;
+}
+
+[data-theme='light'] .carousel {
+    opacity: 0.1;
+    /* Even lighter in light mode */
+    filter: none;
+}
+
+[data-theme='light'] .image {
+    filter: grayscale(100%);
+    /* Keep grayscale for clean look */
+}

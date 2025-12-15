@@ -1,0 +1,290 @@
+.navbar {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 90%;
+    max-width: var(--container-width);
+    height: 54px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border-radius: 999px;
+    background: transparent;
+    border: 1px solid transparent;
+}
+
+.activeBeam {
+    position: absolute;
+    bottom: -1px;
+    height: 1.5px;
+    background: linear-gradient(90deg, transparent 0%, #ff8a00 35%, #e52e71 65%, transparent 100%);
+    border-radius: 99px;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 10;
+    box-shadow: 0 0 15px 1px rgba(255, 100, 0, 0.8);
+    pointer-events: none;
+}
+
+.scrolled {
+    background: var(--nav-bg-scrolled);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    width: 80%;
+}
+
+/* ... existing code ... */
+/* I will just match the specific blocks I want to change */
+
+.ctaButton {
+    height: 36px;
+    padding: 0 16px;
+    background: var(--cta-bg);
+    color: var(--foreground);
+    border-radius: 99px;
+    font-weight: 500;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+    border: 1px solid var(--glass-border);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.ctaButton:hover {
+    background: var(--cta-hover-bg);
+    color: var(--cta-hover-text);
+}
+
+.navbarInner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+}
+
+.logo {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--foreground);
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0.9;
+    transition: opacity 0.2s;
+}
+
+.logo:hover {
+    opacity: 1;
+}
+
+.navLinks {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navItem {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--accents-5);
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.navItem:hover {
+    color: var(--foreground);
+}
+
+.ctaButton {
+    height: 36px;
+    padding: 0 16px;
+    background: var(--cta-bg);
+    color: var(--foreground);
+    border-radius: 99px;
+    font-weight: 500;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+    border: 1px solid var(--glass-border);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.navActions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+@media (max-width: 1024px) {
+    /* .socialIcons was here, now removed */
+}
+
+/* Mobile Menu Styles */
+.mobileToggle {
+    display: none;
+    /* Hidden on desktop by default */
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        background: var(--nav-bg-scrolled);
+        /* Always glass on mobile for visibility */
+        backdrop-filter: blur(20px) saturate(180%);
+        -webkit-backdrop-filter: blur(20px) saturate(180%);
+        border: 1px solid var(--glass-border);
+    }
+
+    .navbar,
+    .scrolled {
+        width: 95%;
+        top: 10px;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .navLinks,
+    .ctaButton {
+        display: none;
+    }
+
+    .mobileToggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        border: none;
+        color: var(--foreground);
+        cursor: pointer;
+        margin-left: 0.5rem;
+        z-index: 1002;
+    }
+
+    .activeBeam {
+        display: none;
+    }
+}
+
+.mobileMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--nav-bg-scrolled);
+    /* Darker/Visible glass background */
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+    /* Behind toggle, above content */
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.mobileMenu.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.mobileLinks {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+}
+
+.mobileLinks a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--foreground);
+    text-decoration: none;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.mobileMenu.open .mobileLinks a {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.1s;
+}
+
+.mobileMenu.open .mobileLinks li:nth-child(1) a {
+    transition-delay: 0.1s;
+}
+
+.mobileMenu.open .mobileLinks li:nth-child(2) a {
+    transition-delay: 0.15s;
+}
+
+.mobileMenu.open .mobileLinks li:nth-child(3) a {
+    transition-delay: 0.2s;
+}
+
+.mobileMenu.open .mobileLinks li:nth-child(4) a {
+    transition-delay: 0.25s;
+}
+
+.mobileMenu.open .mobileLinks li:nth-child(5) a {
+    transition-delay: 0.3s;
+}
+
+.mobileMenu.open .mobileLinks li:nth-child(5) a {
+    transition-delay: 0.3s;
+}
+
+.mobileCta {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: var(--cta-bg);
+    color: var(--foreground);
+    padding: 1rem 2rem;
+    border-radius: 99px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border: 1px solid var(--glass-border);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.mobileMenu.open .mobileCta {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.4s;
+}
+
+[data-theme='light'] .mobileMenu {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+[data-theme='light'] .activeBeam {
+    background: linear-gradient(90deg, transparent 0%, #0070f3 35%, #00c6ff 65%, transparent 100%);
+    box-shadow: 0 0 15px 1px rgba(0, 112, 243, 0.8);
+}

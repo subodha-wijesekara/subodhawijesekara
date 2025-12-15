@@ -1,0 +1,116 @@
+.overlay {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: auto;
+    animation: fadeIn 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.content {
+    width: 100%;
+    max-width: 1000px;
+    padding: 6rem 2rem 4rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    animation: slideUp 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.header {
+    text-align: center;
+    color: var(--foreground);
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+}
+
+.meta {
+    color: var(--accents-5);
+    font-size: 1rem;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.imageWrapper {
+    width: 100%;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+}
+
+/* Maintain aspect ratio logic (simulated with padding or explicit height via Next/Image logic) */
+.imageWrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.closeButton {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    color: var(--foreground);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2010;
+    transition: all 0.2s;
+}
+
+.closeButton:hover {
+    background: var(--cta-hover-bg);
+    color: var(--cta-hover-text);
+    transform: rotate(90deg);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+[data-theme='light'] .overlay {
+    background: rgba(255, 255, 255, 0.9);
+}

@@ -1,0 +1,40 @@
+.footer {
+    padding: 4rem 1.5rem;
+    /* Transparent background to let glow subtle show through or just dark */
+    background: transparent;
+    border-top: 1px solid var(--glass-border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 4rem;
+    position: relative;
+    z-index: 10;
+}
+
+.socials {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.socialLink {
+    color: var(--accents-4);
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background: var(--glass-bg);
+    border: 1px solid transparent;
+}
+
+.socialLink:hover {
+    color: var(--foreground);
+    background: var(--cta-bg);
+    border-color: var(--glass-border);
+    transform: translateY(-3px);
+}
+
+.copy {
+    font-size: 0.875rem;
+    color: var(--accents-4);
+    opacity: 0.7;
+}
