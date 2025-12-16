@@ -46,11 +46,11 @@ const PROJECTS: Project[] = [
     },
     {
         id: 5,
-        title: "CryptoViz",
+        title: "Image compression & Enhancement tool",
         description: "Real-time cryptocurrency visualizer and portfolio tracker using CoinGecko API.",
         tags: ["Next.js", "Web3", "Finance"],
         link: "https://github.com",
-        image: "https://images.unsplash.com/photo-1518546305927-5a555bb7020d?q=80&w=2369&auto=format&fit=crop"
+        image: "/images/ic1.png"
     },
     {
         id: 6,
