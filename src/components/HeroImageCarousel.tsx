@@ -6,7 +6,7 @@ import styles from "./HeroImageCarousel.module.css";
 
 const IMAGES = [
     "/images/main1.jpg",
-    "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop",
+    "/images/main1.jpg",
     "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2064&auto=format&fit=crop",
     "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
 ];
