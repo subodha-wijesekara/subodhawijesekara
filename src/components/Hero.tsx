@@ -26,13 +26,13 @@ export default function Hero() {
                 </div>
 
                 <div className={styles.socials}>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/rscwijesekara/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="LinkedIn">
                         <Linkedin size={22} />
                     </a>
-                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="GitHub">
+                    <a href="https://github.com/subodha-wijeseakra" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="GitHub">
                         <Github size={22} />
                     </a>
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="Facebook">
+                    <a href="https://web.facebook.com/wijesekararsc" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="Facebook">
                         <Facebook size={22} />
                     </a>
                     <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="Instagram">
