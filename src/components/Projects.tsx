@@ -16,7 +16,7 @@ const PROJECTS: Project[] = [
         id: 1,
         title: "Project Alpha",
         description: "A comprehensive dashboard for financial analytics using Next.js and Tailwind.",
-        tags: ["Next.js", "Analytics", "Dashboard"],
+        tags: ["Next.js", "Next Auth", "MongoDB", "Tailwind CSS", "bcryptjs", "zod"],
         link: "https://github.com",
         image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop"
     },
