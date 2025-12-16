@@ -26,7 +26,7 @@ const PROJECTS: Project[] = [
         description: "Modern e-commerce platform with headless architecture and Stripe integration.",
         tags: ["React", "Stripe", "E-commerce"],
         link: "https://github.com",
-        image: "/images/wa1.JPG"
+        image: "/images/wa1.png"
     },
     {
         id: 3,
