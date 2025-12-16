@@ -22,7 +22,7 @@ const PROJECTS: Project[] = [
     },
     {
         id: 2,
-        title: "NeoCommerce",
+        title: "Wallet App",
         description: "Modern e-commerce platform with headless architecture and Stripe integration.",
         tags: ["React", "Stripe", "E-commerce"],
         link: "https://github.com",
