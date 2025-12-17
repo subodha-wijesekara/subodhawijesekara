@@ -54,11 +54,11 @@ const PROJECTS: Project[] = [
     },
     {
         id: 6,
-        title: "Wanderlust",
+        title: "Chat application",
         description: "A digital travel journal map for documenting trips and sharing memories.",
         tags: ["Mapbox", "Node.js", "Travel"],
         link: "https://github.com",
-        image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2321&auto=format&fit=crop"
+        image: "/images/ca1.png"
     }
 ];
 
