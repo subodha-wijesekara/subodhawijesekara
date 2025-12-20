@@ -22,10 +22,10 @@ const PROJECTS: Project[] = [
     },
     {
         id: 2,
-        title: "Wallet App",
-        description: "Modern e-commerce platform with headless architecture and Stripe integration.",
+        title: "Chat look",
+        description: "Smart chat application with secured authentication",
         tags: ["React", "Stripe", "E-commerce"],
-        link: "https://github.com",
+        link: "https://github.com/subodha-wijeseakra/chat_look",
         image: "/images/wa1.png"
     },
     {
