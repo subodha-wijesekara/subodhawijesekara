@@ -42,7 +42,7 @@ export default function PortfolioModal({ isOpen, onClose, item }: PortfolioModal
             <div className={styles.content} onClick={(e) => e.stopPropagation()}>
                 <div className={styles.header}>
                     <h2 className={styles.title}>{item.title}</h2>
-                    <p className={styles.meta}>Project Gallery & Details</p>
+                    <p className={styles.meta}>My latest designs</p>
                 </div>
 
                 <div className={styles.gallery}>
