@@ -16,26 +16,26 @@ const PHOTOS: Photo[] = [
     {
         id: 1,
         src: "/images/l4.png", // Forest/Nature
-        title: "Exploring Nature",
-        description: "Finding peace in the deep woods."
+        title: "",
+        description: ""
     },
     {
         id: 2,
         src: "/images/l1.png", // Travel/Adventure
-        title: "Mountain Hiking",
-        description: "Reaching new heights and breathtaking views."
+        title: "",
+        description: ""
     },
     {
         id: 3,
         src: "/images/l2.png", // Photography/Camera
-        title: "Capturing Moments",
-        description: "Freezing time through the lens."
+        title: "",
+        description: ""
     },
     {
         id: 4,
         src: "/images/l3.png", // Tech/Workspace
-        title: "My Workspace",
-        description: "Where ideas come to life."
+        title: "",
+        description: ""
     }
 ];
 
