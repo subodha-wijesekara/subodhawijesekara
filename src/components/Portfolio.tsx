@@ -19,11 +19,12 @@ const PORTFOLIO_ITEMS = [
     },
     {
         id: 2,
-        title: "Mobile App Concept",
-        image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2370&auto=format&fit=crop",
+        title: "Essentials",
+        image: "/images/ma1.png",
         gallery: [
-            "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2370&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=2274&auto=format&fit=crop"
+            "/images/ma2.png",
+            "/images/ma3.png",
+            "/images/ma4.png"
         ]
     },
     {
