@@ -59,7 +59,7 @@ export default function ArticlesModal({ isOpen, onClose, article }: ArticlesModa
                     rel="noopener noreferrer"
                     className={styles.mediumLink}
                 >
-                    Read full story on Medium
+                    Read full story
                 </a>
             </div>
         </div>,

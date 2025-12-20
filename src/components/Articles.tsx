@@ -37,7 +37,7 @@ const ARTICLES: Article[] = [
         excerpt: "Lessons learned from managing large-scale monorepos.",
         date: "Nov 2024",
         content: "As frontend applications grow, managing complexity becomes a primary challenge. Monorepos, using tools like Turborepo or Nx, offer a solution by allowing you to share code, configurations, and types across multiple projects.\n\nKey strategies for scaling include enforcing strict boundaries between features, using a design system library, and automating code quality checks. This ensures that as the team and codebase grow, velocity doesn't suffer.",
-        mediumLink: "https://medium.com/"
+        mediumLink: "https://www.linkedin.com/posts/rscwijesekara_artificialintelligence-nvidia-opensourceai-activity-7407131643028725760-Eijx?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEn5AlcBeMhVm4jedvnh7sWL9QIhAQmPejI"
     },
 ];
 
