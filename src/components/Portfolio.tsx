@@ -46,11 +46,11 @@ const PORTFOLIO_ITEMS = [
     },
     {
         id: 5,
-        title: "3D Illustration",
-        image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2232&auto=format&fit=crop",
+        title: "Understanding the ergonomics",
+        image: "/images/eg1.png",
         gallery: [
-            "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2232&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=2370&auto=format&fit=crop"
+            "/images/eg2.png",
+            "/images/eg3.png"
         ]
     },
     {
