@@ -25,11 +25,11 @@ const ARTICLES: Article[] = [
     },
     {
         id: 2,
-        title: "The Art of Micro-Interactions",
-        excerpt: "How subtle animations can significantly improve user experience.",
-        date: "Dec 2024",
-        content: "Micro-interactions are the small, functional animations that guide users through an application. Think of the 'like' button animation on Twitter or the swipe gesture to archive an email.\n\nThese details may seem minor, but they contribute heavily to the overall 'feel' of a product. They provide feedback, communicate system status, and can even prevent errors. A well-designed micro-interaction delights the user and makes the interface feel alive.",
-        mediumLink: "https://medium.com/"
+        title: "Why Next.js Is Becoming the Go To Framework",
+        excerpt: "In today’s fast-moving web ecosystem, developers and businesses are no longer satisfied with just “working” applications. Performance, SEO, scalability, and developer experience have become critical success factors.",
+        date: "Dec 2025",
+        content: "One of the biggest reasons behind Next.js’s popularity is its focus on performance. Features like automatic code splitting, image optimization, and incremental static regeneration (ISR) ensure that users receive fast-loading pages without extra configuration. Pages load only the JavaScript they need, reducing bundle size and improving overall speed — especially important for mobile users.",
+        mediumLink: "https://medium.com/@wijesekararsc/why-next-js-is-becoming-the-go-to-framework-for-modern-web-applications-c762640ff440"
     },
     {
         id: 3,
