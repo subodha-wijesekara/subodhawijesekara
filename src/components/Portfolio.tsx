@@ -19,7 +19,7 @@ const PORTFOLIO_ITEMS = [
     },
     {
         id: 2,
-        title: "Essentials",
+        title: "Mobile ready solutions",
         image: "/images/ma1.png",
         gallery: [
             "/images/ma2.png",
