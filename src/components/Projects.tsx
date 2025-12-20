@@ -50,15 +50,15 @@ const PROJECTS: Project[] = [
         description: "Weather forecasting application up to 7 days",
         tags: ["Next.js", "Tailwind CSS", "TypeScript", "Open Meteo API", "leaflet.js"],
         link: "https://github.com",
-        image: "/images/ic1.png"
+        image: "/images/wea1.png"
     },
     {
         id: 6,
-        title: "Chat application",
-        description: "A digital travel journal map for documenting trips and sharing memories.",
-        tags: ["Mapbox", "Node.js", "Travel"],
-        link: "https://github.com",
-        image: "/images/ca1.png"
+        title: "Wallet application",
+        description: "Advanced finance management application",
+        tags: ["Next.js", "Tailwind CSS", "TypeScript", "zod", "bcryptjs", "Next Auth", "MongoDB"],
+        link: "https://github.com/subodha-wijeseakra/wallet_app",
+        image: "/images/wa1.png"
     }
 ];
 
