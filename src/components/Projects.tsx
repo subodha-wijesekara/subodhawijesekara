@@ -46,9 +46,9 @@ const PROJECTS: Project[] = [
     },
     {
         id: 5,
-        title: "Image compression & Enhancement tool",
-        description: "Real-time cryptocurrency visualizer and portfolio tracker using CoinGecko API.",
-        tags: ["Next.js", "Web3", "Finance"],
+        title: "Weather app",
+        description: "Weather forecasting application up to 7 days",
+        tags: ["Next.js", "Tailwind CSS", "TypeScript", "Open Meteo API", "leaflet.js"],
         link: "https://github.com",
         image: "/images/ic1.png"
     },
