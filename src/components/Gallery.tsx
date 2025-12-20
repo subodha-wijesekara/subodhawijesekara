@@ -15,13 +15,13 @@ interface Photo {
 const PHOTOS: Photo[] = [
     {
         id: 1,
-        src: "https://images.unsplash.com/photo-1542206395-9feb3edaa68d?q=80&w=3432&auto=format&fit=crop", // Forest/Nature
+        src: "/images/l1.png", // Forest/Nature
         title: "Exploring Nature",
         description: "Finding peace in the deep woods."
     },
     {
         id: 2,
-        src: "https://images.unsplash.com/photo-1502014822147-1aed80671e0a?q=80&w=3348&auto=format&fit=crop", // Travel/Adventure
+        src: "/images/l2.png", // Travel/Adventure
         title: "Mountain Hiking",
         description: "Reaching new heights and breathtaking views."
     },
