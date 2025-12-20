@@ -12,9 +12,9 @@ const PORTFOLIO_ITEMS = [
         title: "UI & UX Design",
         image: "/images/uiux1.png",
         gallery: [
-            "/images/uiux1.png",
             "/images/uiux2.png",
-            "/images/uiux3.png"
+            "/images/uiux3.png",
+            "/images/uiux4.png"
         ]
     },
     {
