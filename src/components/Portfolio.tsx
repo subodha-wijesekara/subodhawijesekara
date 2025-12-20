@@ -22,9 +22,9 @@ const PORTFOLIO_ITEMS = [
         title: "Mobile ready solutions",
         image: "/images/ma1.png",
         gallery: [
+            "/images/ma1.png",
             "/images/ma2.png",
-            "/images/ma3.png",
-            "/images/ma4.png"
+            "/images/ma3.png"
         ]
     },
     {
