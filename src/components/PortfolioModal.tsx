@@ -17,6 +17,13 @@ interface PortfolioModalProps {
 }
 
 export default function PortfolioModal({ isOpen, onClose, item }: PortfolioModalProps) {
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+        return () => setMounted(false);
+    }, []);
+
     // Prevent body scroll when open
     useEffect(() => {
         if (isOpen) {
@@ -29,20 +36,11 @@ export default function PortfolioModal({ isOpen, onClose, item }: PortfolioModal
         };
     }, [isOpen]);
 
+    if (!mounted) return null;
     if (!isOpen || !item) return null;
 
     // Use gallery if available, otherwise just show main image x 3 for demo
     const images = item.gallery || [item.image, item.image, item.image];
-
-    // Use Portal to escape parent stacking contexts
-    const [mounted, setMounted] = useState(false);
-
-    useEffect(() => {
-        setMounted(true);
-        return () => setMounted(false);
-    }, []);
-
-    if (!mounted) return null;
 
     return createPortal(
         <div className={styles.overlay} onClick={onClose}>
