@@ -42,11 +42,12 @@ export default function Navbar() {
                 </Link>
 
                 <ul className={styles.navLinks}>
-                    <li><Link href="#projects" className={styles.navItem} onClick={handleLinkClick}>Projects</Link></li>
-                    <li><Link href="#portfolio" className={styles.navItem} onClick={handleLinkClick}>Portfolio</Link></li>
-                    <li><Link href="#thoughts" className={styles.navItem} onClick={handleLinkClick}>Thoughts</Link></li>
-                    <li><Link href="#articles" className={styles.navItem} onClick={handleLinkClick}>Articles</Link></li>
-                    <li><Link href="#contact" className={styles.navItem} onClick={handleLinkClick}>Contact</Link></li>
+                    <li><Link href="/#projects" className={styles.navItem} onClick={handleLinkClick}>Projects</Link></li>
+                    <li><Link href="/#portfolio" className={styles.navItem} onClick={handleLinkClick}>Portfolio</Link></li>
+                    <li><Link href="/#thoughts" className={styles.navItem} onClick={handleLinkClick}>Thoughts</Link></li>
+                    <li><Link href="/#articles" className={styles.navItem} onClick={handleLinkClick}>Articles</Link></li>
+                    <li><Link href="/explore" className={styles.navItem} onClick={handleLinkClick}>Explore</Link></li>
+                    <li><Link href="/#contact" className={styles.navItem} onClick={handleLinkClick}>Contact</Link></li>
                 </ul>
 
                 <div className={styles.navActions}>
@@ -69,11 +70,12 @@ export default function Navbar() {
             {/* Mobile Menu */}
             <div className={`${styles.mobileMenu} ${isMobileOpen ? styles.open : ""}`}>
                 <ul className={styles.mobileLinks}>
-                    <li><Link href="#projects" onClick={() => setIsMobileOpen(false)}>Projects</Link></li>
-                    <li><Link href="#portfolio" onClick={() => setIsMobileOpen(false)}>Portfolio</Link></li>
-                    <li><Link href="#thoughts" onClick={() => setIsMobileOpen(false)}>Thoughts</Link></li>
-                    <li><Link href="#articles" onClick={() => setIsMobileOpen(false)}>Articles</Link></li>
-                    <li><Link href="#contact" onClick={() => setIsMobileOpen(false)}>Contact</Link></li>
+                    <li><Link href="/#projects" onClick={() => setIsMobileOpen(false)}>Projects</Link></li>
+                    <li><Link href="/#portfolio" onClick={() => setIsMobileOpen(false)}>Portfolio</Link></li>
+                    <li><Link href="/#thoughts" onClick={() => setIsMobileOpen(false)}>Thoughts</Link></li>
+                    <li><Link href="/#articles" onClick={() => setIsMobileOpen(false)}>Articles</Link></li>
+                    <li><Link href="/explore" onClick={() => setIsMobileOpen(false)}>Explore</Link></li>
+                    <li><Link href="/#contact" onClick={() => setIsMobileOpen(false)}>Contact</Link></li>
                 </ul>
 
                 <a href="/cv.pdf" download className={styles.mobileCta}>
