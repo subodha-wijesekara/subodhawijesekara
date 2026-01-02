@@ -8,7 +8,7 @@ export default function Footer() {
                 <a href="https://www.linkedin.com/in/rscwijesekara/" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
                     <Linkedin size={20} />
                 </a>
-                <a href="https://github.com/subodha-wijeseakra" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+                <a href="https://github.com/subodha-wijesekara" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
                     <Github size={20} />
                 </a>
                 <a href="https://web.facebook.com/wijesekararsc" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
